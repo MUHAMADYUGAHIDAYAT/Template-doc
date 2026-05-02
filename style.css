@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 650px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #E6B325;
+    padding-bottom: 15px;
+}
+
+.header-text {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-bsi {
+    height: 50px;
+    width: auto;
+}
+
+h2 {
+    color: #E6B325;
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 20px;
+    text-align: center;
+    margin-top: 2px;
+}
+
+.teks-cabang {
+    color: #0c0900;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-left: 50px;
+}
+
+.disclaimer {
+    background: #fff8e1;
+    color: #5b4a00;
+    border-left: 5px solid #E6B325;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 610px;
+    font-size: 13.5px;
+    line-height: 1.55;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    box-sizing: border-box;
+}
+
+.disclaimer strong {
+    color: #8a6d00;
+    margin-right: 4px;
+}
+
+.disclaimer code {
+    background: rgba(230, 179, 37, 0.18);
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 12.5px;
+}
+
+.pilihan-template {
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-left: 5px solid #006747;
+    width: 100%;
+    max-width: 610px;
+}
+
+.pilihan-template strong {
+    display: block;
+    margin-bottom: 10px;
+    color: #006747;
+}
+
+.pilihan-template hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 10px 0;
+}
+
+.pilihan-template input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#input-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 590px;
+}
+
+.field-group {
+    margin-bottom: 15px;
+}
+
+.field-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #666;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], 
+input[type="date"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, 
+input[type="date"]:focus {
+    outline: none;
+    border-color: #006747;
+    box-shadow: 0 0 0 3px rgba(0, 103, 71, 0.1);
+}
+
+button {
+    background-color: #006747;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #00563b;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#alamatN, #alamatP {
+    width: 100%;
+    min-height: 100px; 
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    resize: none; 
+    overflow: hidden; 
+    line-height: 1.5;
+    transition: border-color 0.3s;
+}
+
+#alamatN:focus, #alamatP:focus {
+    outline: none;
+    border-color: #006747;
+    box-shadow: 0 0 0 3px rgba(0, 103, 71, 0.1);
+}
+
+@media (max-width: 600px) {
+    body { padding: 20px; }
+    .header-container, .disclaimer, .pilihan-template, #input-container { width: 100%; }
+}

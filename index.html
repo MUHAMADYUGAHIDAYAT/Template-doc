@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Generator Dokumen Nasabah</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header-container">
+    <img src="assets\foto\logo-bsi.png" alt="Logo BSI" class="logo-bsi">
+    <h2>Template Document Akad</h2> <br>
+    <div class="teks-cabang">KCP Veteran Palembang</div>
+</div>
+
+<div class="disclaimer" role="note" aria-label="Pemberitahuan">
+    <strong>Catatan:</strong>
+    Template <code>.docx</code> di repo ini adalah <b>versi publik (dummy)</b>
+    dan <b>BUKAN</b> template resmi/sensitif milik Bank.
+    Konten dokumen sengaja diganti agar aman dipublikasikan.
+    Untuk pemakaian internal, ganti file di folder <code>templates/</code>
+    dengan template asli kantor (lihat <code>README.md</code>).
+</div>
+
+<div class="pilihan-template">
+  <strong>Pilih Template:</strong><br>
+  <input type="checkbox" id="cekSemua" checked onclick="toggleAll(this)"> <label for="cekSemua"><b>Pilih Semua</b></label><br>
+  <hr>
+  <input type="checkbox" class="tpl-check" value="0" checked onchange="updateFields()"> Surat Pernyataan COVER ASS <br>
+  <input type="checkbox" class="tpl-check" value="1" checked onchange="updateFields()"> Surat Pernyataan dan Kuasa Blokir <br>
+  <input type="checkbox" class="tpl-check" value="2" checked onchange="updateFields()"> Surat Pernyataan Nasabah   <br>
+  <input type="checkbox" class="tpl-check" value="3" checked onchange="updateFields()"> Surat Debut Rekening <br>
+  <input type="checkbox" class="tpl-check" value="4" checked onchange="updateFields()"> SPP Pasangan <br>
+  <input type="checkbox" class="tpl-check" value="5" checked onchange="updateFields()"> Memo Blokir <br>
+  <input type="checkbox" class="tpl-check" value="6" checked onchange="updateFields()"> GCG <br>
+  <input type="checkbox" class="tpl-check" value="7" checked onchange="updateFields()"> FRP Pencairan <br>
+  <input type="checkbox" class="tpl-check" value="8" checked onchange="updateFields()"> DAFTAR HADIR AKAD <br>
+  <input type="checkbox" class="tpl-check" value="9" checked onchange="updateFields()"> BSTJ <br>
+  <input type="checkbox" class="tpl-check" value="10" checked onchange="updateFields()"> Berita Acara <br>
+  <input type="checkbox" class="tpl-check" value="11" checked onchange="updateFields()"> Berita Acara Akad<br>
+  <input type="checkbox" class="tpl-check" value="12" checked onchange="updateFields()"> Surat Pernyataan Hutang<br>
+
+</div>
+<br>
+
+<div id="input-container">
+  <div id="group-namaN" class="field-group">
+    <input type="text" id="namaN" placeholder="Nama Nasabah"><br>
+  </div>
+  <div id="group-ttlN" class="field-group">
+    <input type="text" id="ttlN" placeholder="Tempat Tanggal Lahir Nasabah"><br>
+  </div>
+  
+<div id="group-alamatN" class="field-group">
+    <label>Alamat Nasabah:</label>
+    <textarea id="alamatN" placeholder="Masukkan alamat lengkap nasabah (RT, RW, Kelurahan, Kecamatan)" oninput="autoResize(this)"></textarea>
+</div>
+
+  <div id="group-noKTPN" class="field-group">
+    <input type="text" id="noKTPN" placeholder="No KTP Nasabah"><br>
+  </div>
+
+  <div id="group-noRekN" class="field-group">
+    <input type="text" id="noRekN" placeholder="No Rekening Nasabah"><br>
+  </div>
+
+  <div id="group-noTelN" class="field-group">
+    <input type="text" id="noTelN" placeholder="No Telephone Nasabah"><br>
+  </div>
+
+  <div id="group-namaP" class="field-group">
+    <input type="text" id="namaP" placeholder="Nama Pasangan"><br>
+  </div>
+
+  <div id="group-ttlP" class="field-group">
+    <input type="text" id="ttlP" placeholder="Tempat Tanggal Lahir Pasangan"><br>
+  </div>
+
+  <div id="group-alamatP" class="field-group">
+      <label>Alamat Pasangan:</label>
+      <textarea id="alamatP" placeholder="Masukkan alamat lengkap pasangan (RT, RW, Kelurahan, Kecamatan)" oninput="autoResize(this)"></textarea>
+  </div>
+  
+  <div id="group-noKTPP" class="field-group">
+    <input type="text" id="noKTPP" placeholder="No KTP Pasangan"><br>
+  </div>
+
+  <div id="group-noTelP" class="field-group">
+    <input type="text" id="noTelP" placeholder="No Telephone Pasangan"><br>
+  </div>
+
+<div id="group-noAkad" class="field-group">
+    <input type="text" id="noAkad" placeholder="No Akad"><br>
+  </div>
+
+<div class="field-group" id="group-tanggal">
+  <label>Tanggal Dokumen:</label><br>
+  <input type="date" id="tglInput"><br>
+</div><br>
+
+  <div id="group-namaDoc" class="field-group">
+    <input type="text" id="namaDoc" placeholder="Nama File (Panggilan)"><br>
+  </div>
+
+  <br>
+
+<button onclick="generate()">Generate Dokumen</button>
+
+<script src="https://unpkg.com/pizzip@3.1.5/dist/pizzip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/docxtemplater/3.37.1/docxtemplater.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
