@@ -1,4 +1,4 @@
-# Sistem Templade Dokumen Akad
+# Sistem Template Dokumen Akad
 
 Aplikasi web statis untuk **generate dokumen akad nasabah** secara batch dari
 sekumpulan template `.docx`. Cukup isi data nasabah satu kali, centang
