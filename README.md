@@ -28,7 +28,7 @@ hanya satu template) atau satu paket `.zip` (jika lebih dari satu).
 
 ## Latar Belakang
 
-Project ini merupakan **luaran (deliverable) Laporan Kerja Praktek** yang
+Project ini merupakan **Laporan Kerja Praktek** yang
 disusun selama penulis menjalani Kerja Praktek di **BSI KCP Palembang
 Veteran**. Selama masa KP, penulis melakukan observasi terhadap alur
 kerja petugas dan berhasil **mengidentifikasi sebuah masalah operasional
